@@ -1,0 +1,13 @@
+name = "v2raycf"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-05-23"
+minify = true
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[env.dev]
+build = { command = "cargo install -q worker-build && worker-build --dev" }
+
+[vars]
+UUID = "f07d4ce0-4384-4c3b-83af-4bdc3aba4987"
